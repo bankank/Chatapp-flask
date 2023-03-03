@@ -1,0 +1,306 @@
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #111111;
+    height: 100%;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #80DEEA;
+}
+
+.chat-body {
+    background-color: #121212;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1E1E1E;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.home {
+    text-decoration: none;
+    background-color: #80DEEA;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 100px;
+    text-align: center;
+    padding-top: 10px;
+    color: whitesmoke;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    border: none;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.texthome {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.home:hover {
+    background-color: transparent;
+    color: #80DEEA;
+    border: solid;
+    border-top: 0px;
+    border-bottom: 0px;
+    height: 50px;
+    margin: 0px;
+    margin-left: 20px;
+    padding: 0px;
+    padding-top: 30px;
+    border-radius: 0px;
+}
+
+.empty-space {
+    width: 100%;
+    flex-shrink: 100%;
+
+}
+
+.nickname {
+    background-color: transparent;
+    border: solid;
+    border-color: #80DEEA;
+    color: #80DEEA;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 250px;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 40px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.01s;
+
+}
+
+.nickname:hover {
+    background-color: #80DEEA;
+    color: whitesmoke;
+}
+
+.logout-text {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.logout {
+    width: 120px;
+    height: 35px;
+    background-color: rgb(199, 78, 78);
+    color: whitesmoke;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.logout:hover {
+    width: 113px;
+    height: 31px;
+    background-color: transparent;
+    color: rgb(233, 31, 31);
+    border-width: 2px;
+    border: solid rgb(233, 31, 31);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.01s;
+    padding-top: 9px;
+}
+
+/* NAV BAR END */
+
+/* Chat Display Start*/
+
+.chat-display {
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+
+/* Chat Right Start */
+
+.chat-right {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 100% -80px;
+    margin-top: 80px;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.display-message {
+    color: #80DEEA;
+    overflow-y: scroll;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.join-display {
+    display: flex;
+    text-align: center;
+}
+
+.joined-chat-message {
+    color: orange;
+    font-weight: 500;
+    margin-left: 40%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.joinedat {
+    color: orange;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: none;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.joined-chat-message:hover+.joinedat {
+    display: block;
+    color: gray;
+    margin-left: 5px;
+
+}
+
+.message-display {
+    color: cyan;
+    display: grid;
+    padding-left: 5px;
+    margin-top: 10px;
+}
+
+.message-display:hover {
+    background-color: #1E1E1E;
+}
+
+.nickname-display {
+    color: orange;
+    color: cyan;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.datetime {
+    color: gray;
+    font-size: 10px;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.msg-display {
+    color: cyan;
+    color: white;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    word-break: break-all;
+
+}
+
+.send {
+    display: flex;
+    margin-top: 10px;
+    height: 60px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input-message {
+    background-color: #1E1E1E;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #80DEEA;
+}
+
+.input-message:focus {
+    outline: none;
+}
+
+.send-btn {
+    background-color: #80DEEA;
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding-left: 5px;
+    color: white;
+    font-size: medium;
+}
+
+.sent {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+/* Chat Right End*/
+
+/* Chat Left Start */
+.chat-left {
+    background-color: #0F0F0F;
+    width: 300px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+
+}
+
+.left-user {
+    overflow-y: scroll;
+    word-break: break-all;
+}
+
+.displayhead {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #80DEEA;
+}
+
+.left-user-list {
+    color: #80DEEA;
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 10px;
+}
+
+.empty {
+    width: 20px;
+    background-color: #0F0F0F;
+}
+
+/* Chat Left End */
+
+/* Chat Display End */

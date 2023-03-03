@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <link href="../static/css/chat_default.css" rel="stylesheet" />
+    <link href="../static/assets/icon.png" rel="icon" />
+    <script src="../static/js/chat_default.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="chat-body">
+    <div class="servers-column">
+
+        <div class="home-button">
+            <a href="me">
+                <!-- <button class="me-button"> -->
+                    <img class="home-button-icon" src="../static//assets/icon.png">
+                <!-- </button> -->
+            </a>
+
+        </div>
+    </div>
+    <div class="groups-column">
+
+        <div class="search-groups">
+            <input type="text" class="search-for-group" placeholder="Search for groups" disabled>
+        </div>
+ 
+
+        <div class="group-list">
+            <div class="Groups"> <span class="groups-text">GROUPS</span> <a href="/chat/create/group"> <button class="create-group-button">+</button> </a></div>
+        </div>
+
+
+        <div class="profile-section">
+            <div class="profile-section-box">
+                <div class="profile-section-username">{{username_profile}}</div>
+                 <a href="/chat/me/profile" class="profile-section-setting"> <i class="fa fa-gear" style="font-size: 20px;"></i> </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="friends-column">
+
+    </div>
+</body>
+
+</html>

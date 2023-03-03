@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="../static/css/login.css" rel="stylesheet">
+    <link href="../static/assets/icon.png" rel="icon">
+</head>
+<body class="login-body">
+    <div class="area">
+
+        <div class="head">
+            <h2 class="login">Login</h2>
+        </div>
+        <div class="body">
+        <form method="post" action="/login">
+                <p class="text">Username   <span class="error">{{error_message}}</span></p>
+                <input type="text" class="inputfield" maxlength="20" required name="login_username">
+                <p class="text">Password </p>
+                <input type="password" class="inputfield" maxlength="30" id="pass" required name="login_password">
+        </div>
+
+        <div class="end">
+                <input type="submit" class="submit" value="Login">
+                <a href="register" class="register">Register?</a>
+        </div>
+    </div>
+         </form>
+</body>
+</html>
+
+

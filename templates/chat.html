@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js"
+        integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"
+        integrity="sha512-YeeA/Qxn5hYdkukScTCNNOhTrv1C2RubAGButJ1rmgQwZf/HdRaCGl+JAVkqsqaNRaYNHdheiuKKuPf9mDcqKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+    <title>Chat</title>
+
+    <link href="../static/css/chat.css" rel="stylesheet" />
+    <link href="../static/assets/icon.png" rel="icon" />
+    <script src="../static/js/chat.js"></script>
+</head>
+
+<body class="chat-body">
+
+    <div class="navbar">
+        <a href="home" class="home">
+            <span class="hometext">Home</span>
+        </a>
+        <div class="empty-space"></div>
+
+        <div class="nickname">
+            {{nickname_displaypage}}
+        </div>
+        <a class="logout" href="logout">
+            <span class="logout-text">Logout</span>
+        </a>
+    </div><!-- nav bar -->
+
+    <div class="chat-display">
+
+        <div class="chat-right">
+            <div class="display-message" id="display-message">
+                {% for display_chat in display_chat %}
+
+                <div class="message-display" >
+                    <div class="nickname-display"> {{display_chat.message_author}}
+                        <span class="datetime">{{display_chat.date_time_message}} </span>
+                    </div>
+                    <div class="msg-display"> {{display_chat.message}}</div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="send">
+
+                <input class="input-message" id="input-message" type="text" placeholder="Message" maxlength="1000"
+                    required>
+                <button class="send-btn" id="send-btn">Send</button>
+            </div>
+        </div><!--chat-right  -->
+
+        <div class="empty"> </div>
+        <div class="chat-left">
+            <div class="left-user">
+                <h1 class="displayhead">
+                    Members
+                </h1>
+                {% for display_user in display_user %}
+                <li class="left-user-list"> {{display_user._id}} </li>
+                {% endfor %}
+            </div>
+
+        </div><!--  chat-left-End-->
+
+    </div><!-- Chat-Display-End -->
+
+</body><!-- Chat-Body-End -->
+
+
+</html>

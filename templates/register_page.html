@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="../static/css/register.css" rel="stylesheet">
+    <link href="../static/assets/icon.png" rel="icon">
+</head>
+
+<body class="login-body">
+    <div class="area">
+        <div class="head">
+            <h2 class="login">Register</h2>
+        </div>
+        <div class="body">
+            <form method="post" action="/register">
+                <p class="text">Username<span class="error"> {{error_message}}</span></p>
+                <input type="text" class="inputfield" maxlength="15" minlength="4" required name="username_registered">
+                <p class="text">Password </p>
+                <input type="password" class="inputfield" maxlength="15" minlength="8" id="pass" required
+                    name="password_registered">
+        </div>
+        <div class="end">
+            <input type="submit" class="submit" value="Register">
+            <a href="login" class="register">Login?</a>
+        </div>
+
+    </div>
+</body>
+</html>

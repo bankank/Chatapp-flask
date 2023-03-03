@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Create</title>
+    <link href="../../static/css/create_group.css" rel="stylesheet" />
+    <link href="../../static/assets/icon.png" rel="icon" />
+</head>
+
+<body class="page-body">
+    <div class="area">
+        <div class="head">
+            <h2 class="create-group">Create Group</h2>
+        </div>
+        <div class="body">
+            <form method="post" action="/chat/me"> <!-- action="/chat/me"-->
+                <p class="text">Group Name<span class="error"> {{error_message}}</span></p>
+                <input type="text" class="inputfield" maxlength="10" required name="group_name" >
+                <p class="text">Users</p>
+                <input type="text" class="inputfield"  required name="users" placeholder="bankank,RB17,...">
+        </div>
+        <div class="end">
+            <input type="submit" class="submit" value="Create">
+            <a href="../me" class="cancle">return?</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
